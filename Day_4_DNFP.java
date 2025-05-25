@@ -5,9 +5,9 @@ class DNFP {
     }
 
     public static void sort(int[] arr) {
-        int low = 0, mid = 0, high = arr.length - 1;
+        int low = 0, mid = 0, High = arr.length - 1;
 
-        while (mid <= high) {
+        while (mid <= High) {
             if (arr[mid] == 0) {
                 int temp = arr[low];
                 arr[low] = arr[mid];
@@ -18,9 +18,9 @@ class DNFP {
                 mid++;
             } else { 
                 int temp = arr[mid];
-                arr[mid] = arr[high];
-                arr[high] = temp;
-                high--;
+                arr[mid] = arr[High];
+                arr[High] = temp;
+                High--;
             }
         }
 
