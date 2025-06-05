@@ -19,7 +19,8 @@ class Day_16_Duplicate {
                 }
             }
 
-            if (isDuplicatePresent) continue;
+            if (isDuplicatePresent) 
+            continue;
 
            
             for (int j = i + 1; j < n; j++) {
