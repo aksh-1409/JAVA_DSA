@@ -2,7 +2,7 @@ class Day_6_union_intersection {
 
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 2, 4, 5};
-        int[] arr2 = {4, 2, 6, 7, 8};
+        int[] arr2 = {4, 2, 6, 7, 6, 8};
 
 
         calUnion(arr1, arr2);
@@ -24,7 +24,6 @@ class Day_6_union_intersection {
                     count++;
                 }
             }
-            int k = count;
             for(int i=0;i<arr2.length;i++){
                  int j=0;
                 while(j<count){
@@ -34,13 +33,13 @@ class Day_6_union_intersection {
                     else break;
                 } 
                 if(j==count){
-                    union[k]= arr2[i];
-                    k++;
+                    union[count]= arr2[i];
+                    count++;
                 }
             }
             // Print the union array
             System.out.println("Union: ");
-            for(int i=0;i<k;i++){
+            for(int i=0;i<count;i++){
             System.out.print(union[i]+" ");
         }
         }
