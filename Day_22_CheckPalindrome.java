@@ -9,9 +9,8 @@ class Day_22_CheckPalindrome{
 
     static void isPalindrome(String str){
 
-        boolean flag =  false;
 
-        if (str == null) {
+        if (str == null || str.isEmpty()) {
         System.out.println("Invalid input");
         return;
         }
@@ -19,18 +18,11 @@ class Day_22_CheckPalindrome{
         str = str.toLowerCase();
 
         for(int i=0,j=str.length()-1;i<j;i++,j--){
-           if(str.charAt(i)==str.charAt(j)){
-            flag = true;
+           if(str.charAt(i)!=str.charAt(j)){
+            System.out.println("String is not Palindrome");
+            return ;
            }
-           else{
-           flag = false;
-           break;
         }
-        }
-
-        if(flag){
         System.out.println("String is Palindrome");
-        }else
-        System.out.println("String is not Palindrome");
     }
 }
