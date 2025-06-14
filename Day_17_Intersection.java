@@ -17,7 +17,7 @@ class Day_17_Intersection{
         int j=0;
         
         while(i<arr.length && j<arr1.length){
-            boolean isDuplicateIntersection = false;
+           
             if(arr[i]<arr1[j]){
             i++;
             continue;
